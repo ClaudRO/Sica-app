@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="margin-left: -20px;">Cajero</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="atras"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="crearCajero()">
+    <ion-grid>
+      <div style="text-align:center;color: white">
+        <h3>Crea cajero</h3>
+      </div>
+      <ion-row color="primary" justify-content-center>
+        <ion-col>
+          <div padding>
+            <ion-item lines="full">
+              <ion-input formControlName="direccion" type="text" placeholder="Dirección" required></ion-input>
+            </ion-item>
+            <ion-item>futuro mapa para poner direccion
+
+
+            
+
+
+              
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="Latitud" type="number" placeholder="Latitud" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="Longitud" type="number" placeholder="Longitud" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="BancoId" type="number" placeholder="ID de Banco" required></ion-input>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block" color="success" [disabled]="!registerForm.valid">Crear Cajero</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

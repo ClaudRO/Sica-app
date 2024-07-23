@@ -1,0 +1,26 @@
+/* Ajustes de estilo para los elementos */
+ion-item-divider {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  ion-item {
+    --padding-start: 0;
+    
+  }
+  
+  ion-label {
+    font-weight: bold;
+  }
+  
+  ion-text {
+    font-size: 14px;
+  }
+  ion-img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 350px; /* Altura máxima deseada */
+  }
+
+  /* Otros ajustes de estilo según tus preferencias */
+  

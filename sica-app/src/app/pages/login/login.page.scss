@@ -1,0 +1,47 @@
+
+    #container2 {
+      text-align: center;
+      margin-bottom: 7%;
+    }
+  #container {
+    text-align: center;
+    margin-top: 20px; /* Espacio superior */
+  }
+  
+  ion-content {
+    --background: url('../../../assets/cajerolocation.jpeg') no-repeat center center / cover;
+    
+    
+
+  }
+  .button-container {
+    margin-top: 3%; /* Espacio superior */
+  }
+  form {
+    width: 80%; /* Ancho del formulario */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto;
+    margin-top: 10%; /* Centrar horizontalmente */
+    border: 2px solid #ccc; /* Borde sólido */
+    padding: 20px; /* Espacio alrededor del formulario */
+    border-radius: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(15px); /* Bordes redondeados */
+  }
+  
+  ion-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    
+    /* Espacio entre cada campo */
+  }
+  ion-item,
+ion-input {
+  --color: #ffffff; /* Cambia el color del texto */
+  --ion-item-background: #979797;
+    margin-bottom: 15px;
+     /* Cambia el color de fondo del campo */
+}
+
+  
+  

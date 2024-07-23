@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="margin-left: -20px;">Mapa</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="atras"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mapa</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div id="map"></div>
+  <div id="indicators"></div>
+  
+  <select [(ngModel)]="selectedBanco">
+    <option value="">Bancos</option>
+    <option *ngFor="let banco of bancos" [value]="banco.id">{{ banco.nombre }}</option>
+  </select>
+  <select [(ngModel)]="selectedEstadoOpGeneral">
+    <option value="">Estado Operativo</option>
+    <option value="true">Operativos</option>
+    <option value="false">No Operativos</option>
+  </select>
+
+  <select [(ngModel)]="selectedEstadoHabDepo">
+    <option value="">Estado Depositos</option>
+    <option value="true">Habilitados para Depósitos</option>
+    <option value="false">No Habilitados para Depósitos</option>
+  </select>
+
+  <!--<button id="botonFiltro" (click)="loadFiltroCajeros()">Filtrar Cajeros</button>-->
+  <div class="filters-section">
+    <button id= "botonFiltro" class="button-large" (click)="loadFiltroCajeros()">Filtrar Cajeros</button>
+</div>
+
+  <ion-list>
+    <ion-item *ngFor="let cajero of cajeros" (click)="onCajeroClick(cajero)">
+      {{ getNombreBanco(cajero.BancoId) }} - {{ cajero.direccion }} - {{getDistance(cajero.Latitud, cajero.Longitud)}} km
+    </ion-item>
+    
+  </ion-list>
+  
+
+  
+</ion-content>

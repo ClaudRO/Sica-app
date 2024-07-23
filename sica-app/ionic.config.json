@@ -1,0 +1,7 @@
+{
+  "name": "SICA APP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

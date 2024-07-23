@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Actualizar Estado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Actualizar Estado</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-img src="https://www.putaendoinforma.com/wp-content/uploads/2022/04/portada-cajero.jpg" alt="Imagen del Cajero"></ion-img>
+
+  <ion-list *ngIf="cajero">
+    <ion-item-divider>
+      <ion-label>Datos del Cajero</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>Dirección del Cajero:</ion-label>
+      <ion-text>{{ cajero.direccion }}</ion-text>
+    </ion-item>
+    <ion-list *ngIf="cajero">
+      <!-- Otros detalles del cajero aquí -->
+      <!-- Editar estado del cajero -->
+      <ion-item-divider>
+        <ion-label>Estado del Cajero</ion-label>
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>Estado General:</ion-label>
+        <ion-toggle [(ngModel)]="estado.op_general"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Acceso Discapacitados:</ion-label>
+        <ion-toggle [(ngModel)]="estado.acces_disc"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Habilitado para Depósitos:</ion-label>
+        <ion-toggle [(ngModel)]="estado.hab_depo"></ion-toggle>
+      </ion-item>
+      <button type="button" (click)="guardarCambios()">Guardar Cambios</button>
+    </ion-list>
+  </ion-list>
+  
+
+  <!-- Mostrar información del banco -->
+  <ion-list *ngIf="banco">
+    <ion-item-divider>
+      <ion-label>Datos del Banco</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>Nombre del Banco:</ion-label>
+      <ion-text>{{ banco.nombre }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descripción del Banco:</ion-label>
+      <ion-text>{{ banco.descripcion }}</ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content>

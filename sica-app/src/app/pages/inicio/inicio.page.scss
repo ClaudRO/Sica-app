@@ -1,0 +1,52 @@
+/* Estilos generales */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+ 
+  /* Estilos para el mensaje de bienvenida */
+  .welcome-message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  
+  
+
+  
+  /* Estilos para los botones */
+  
+  
+  /* Estilos para los elementos de la lista */
+  ion-list {
+    margin-top: 20px;
+  }
+  
+  ion-item {
+    --padding-start: 20px;
+    --padding-end: 20px;
+  }
+  ion-content {
+    --background: url('../../../assets/cajerolocation.jpeg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  ion-label {
+    font-weight: bold;
+  }
+  
+  ion-badge {
+    --padding-start: 10px;
+    --padding-end: 10px;
+  }
+  ion-img {
+    object-fit: contain;
+    max-width: 100%;
+    height: 350px;
+    background: url('../../../assets/google-maps-satellite.png') no-repeat center center / cover;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    background-position: center;
+  }

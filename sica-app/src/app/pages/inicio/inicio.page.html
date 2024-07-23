@@ -1,0 +1,48 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!NombreUsuario" routerLink="/login">Iniciar sesión</ion-button>
+      <ion-button *ngIf="NombreUsuario" (click)="logout()">Cerrar sesión</ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Mostrar mensaje de bienvenida si no hay usuario iniciado -->
+  <ion-item *ngIf="!NombreUsuario" style="padding: 10px;">
+    <ion-label style="white-space: normal; word-break: break-word;">
+      ¡Bienvenido a nuestra aplicación! Por favor, inicia sesión para continuar.
+    </ion-label>
+  </ion-item>
+
+  <!-- Contenido para usuarios autenticados -->
+  <ion-item *ngIf="NombreUsuario" style="padding: 10px;">
+    <ion-label style="white-space: normal; word-break: break-word;">
+      Bienvenido <strong>{{ NombreUsuario }}</strong>, 
+      nos alegra tenerte de vuelta!
+    </ion-label>
+  </ion-item>
+  <div>
+    <ion-img src="../../../assets/otraopcion.jpeg"></ion-img>
+  </div>
+  <div class="button-container">
+    <ion-button routerLink="/mapa" >Nueva Búsqueda</ion-button>
+  </div>
+
+  <ion-list *ngIf="NombreUsuario">
+    <ion-item>
+      <ion-label>Mis Cajeros</ion-label>
+      <ion-badge color="primary">22k</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mis evaluaciones</ion-label>
+      <ion-badge color="tertiary">34k</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
